@@ -6,9 +6,9 @@ Live App: https://csi-3150-final-falx-sigma.vercel.app/
 
 GitHub Repo: https://github.com/EvanB05/CSI- 3150 - Final
 
-```
-Overview
-```
+
+## Overview ##
+
 The purpose of the GrandMaster Trivia Game, as implemented in this project, is to give
 PC and mobile users a free, engaging, and user-friendly way to interact with the Open Trivia
 Database in their web browser. The app creates a quiz consisting of 10 random questions from
@@ -19,9 +19,9 @@ required to select the correct answer to each question within 15 seconds of the 
 appearing on screen, and at the end of each quiz, a result screen is displayed with the score out of
 10 and a message depending on how well the user performed.
 
-```
-Component Architecture
-```
+
+## Component Architecture ##
+
 - App.js: The main application file, which stores the global state for the app, with the
     possible states being QuizSettings, QuestionCard, and ResultsScreen
 - QuestionCards.js: Defines the QuestionCard state and builds the quiz itself, displaying
@@ -34,9 +34,9 @@ changes to ResultsScreen.
 - QuizSettings.jsx: Displays the dropdown menu input items for selecting a category and
     difficulty, the start button that switches the state to QuestionCard, and the scoreboard if
     available.
-```
-Detailed Functionality
-```
+
+## Detailed Functionality ##
+
 1. API: This app uses the Open Trivia DB API. The API is called from the URL
     “https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficult
     y}&type=multiple” where category and difficulty are variables set by “selectedCategory”
@@ -63,9 +63,9 @@ localStorage.
     incorrect answers shakes the entire question card, which is scaled up during the animation
     to prevent white gaps around the view window.
 
-```
-User Guide
-```
+
+## User Guide ##
+
 - Step 1: Click “Any Category” and select a category from the drop-down menu, then click
     “Any Difficulty” and select a difficulty from the drop-down menu.
 - Step 2: Press the “Start Quiz” button to switch to the QuestionCard state and begin the
@@ -76,9 +76,9 @@ User Guide
     your score displayed unless there are already five stored scores that are higher.
 
 
-```
-Technical Challenges and Solutions
-```
+
+## Technical Challenges and Solutions ##
+
 The biggest technical challenge in the development of this app was implementing the
 scoreboard function. What made it so difficult was the fact that the fact that it was the very last
 thing I implemented after all the other code had been finalized. As a result, I had to find a way to
@@ -92,8 +92,8 @@ scoreboard update to clicking the “Play Again” button on the results screen.
 about Strict Mode, and how it’s very helpful for developers to see potential bugs, but can also
 interfere with certain functionalities of the code in edge cases like this one.
 
-```
-Video Demo
+
+## Video Demo ##
 https://drive.google.com/file/d/1viwUzvhlvHURDHMynlwWafwPo21rfdzB/view?usp=sharing
-```
+
 
