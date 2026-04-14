@@ -4,7 +4,7 @@ Triva App
 
 Live App: https://csi-3150-final-falx-sigma.vercel.app/
 
-GitHub Repo: https://github.com/EvanB05/CSI- 3150 - Final
+GitHub Repo: https://github.com/EvanB05/CSI-3150-Final
 
 
 ## Overview ##
