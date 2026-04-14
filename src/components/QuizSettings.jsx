@@ -6,7 +6,22 @@ function loadScoreBoard() {
    return scoreBoard;
 }
 
-const scoreboardExists = loadScoreBoard().length > 0;
+function scoreBoard() {
+  if (loadScoreBoard().length > 0) {
+    return (
+      <div className="scoreboard">
+        <h2>Top Scores</h2>
+        <ol>
+          {loadScoreBoard().map((score, index) => (
+          <li key={index}>{score} / 10</li>
+        ))}
+        </ol>
+     </div>
+    );
+  }else {
+    return null;
+  }
+}
 
 export default function QuizSettings({ onStart }) {
   const [categories, setCategories] = useState([]);
@@ -41,20 +56,11 @@ export default function QuizSettings({ onStart }) {
         <option value="hard">Hard</option>
       </select>
       </div>
-
       <button className='start' onClick={() => onStart(selectedCategory, selectedDifficulty)}>
         Start Quiz
       </button>
     </div>
-    {scoreboardExists ? <scoreboard /> : null}
-    <div className="scoreboard">
-      <h2>Top Scores</h2>
-      <ol>
-        {loadScoreBoard().map((score, index) => (
-          <li key={index}>{score} / 10</li>
-        ))}
-      </ol>
-        </div>
+    {scoreBoard()}
     </div>
   );
 }
