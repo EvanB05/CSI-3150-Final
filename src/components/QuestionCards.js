@@ -45,10 +45,11 @@ export default function QuestionCard({ data, onNext, isLast, onCorrect, currentP
     setIsCorrect(null);   // Reset the correctness state
   }, [data]); // <--- Crucial: The effect triggers when 'data' changes
 
-  useEffect(() => {
-    const handleTimeOut = () => {
+  const handleTimeOut = () => {
     onNext(); // Counts as wrong because player ran out of time
-    };
+  };
+
+  useEffect(() => {
     // Stop timer when user answers
     if (hasAnswered) return;
 
@@ -63,6 +64,7 @@ export default function QuestionCard({ data, onNext, isLast, onCorrect, currentP
     }, 1000);
 
     return () => clearInterval(timerId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, hasAnswered]);
 
   return (
