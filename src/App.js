@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState} from 'react';
 import QuizSettings from './components/QuizSettings';
 import QuestionCard from './components/QuestionCards';
 import ResultsScreen from './components/ResultsScreen';
