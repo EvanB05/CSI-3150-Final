@@ -1,5 +1,4 @@
 import myGif from '../patrick-gallon.gif';
-import { useEffect } from 'react';
 export default function ResultsScreen({ currentPoints, onRestart }) {
   return (
     <div className="results-container">
