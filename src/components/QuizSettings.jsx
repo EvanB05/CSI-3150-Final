@@ -6,6 +6,8 @@ function loadScoreBoard() {
    return scoreBoard;
 }
 
+const scoreboardExists = loadScoreBoard().length > 0;
+
 export default function QuizSettings({ onStart }) {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -44,6 +46,7 @@ export default function QuizSettings({ onStart }) {
         Start Quiz
       </button>
     </div>
+    {scoreboardExists ? <scoreboard /> : null}
     <div className="scoreboard">
       <h2>Top Scores</h2>
       <ol>
